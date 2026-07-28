@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>СТО АвтоМастер</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d5d5d5;
+            text-align: center;
+        }
+
+        .main {
+    padding: 120px 20px;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+        h1 {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+       .main p {
+    font-size: 22px;
+    color: #cccccc;
+    margin-bottom: 30px;
+} 
+
+        button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e63946;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+        button:hover {
+           button:hover {
+    background-color: #c92f3b;
+}
+        }
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #222;
+}
+
+nav b {
+    font-size: 22px;
+}.main img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 15px;
+    margin: 30px 0;
+}.advantages {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.advantages h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.advantage-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.advantage {
+    width: 220px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.advantage h3 {
+    font-size: 20px;
+}
+
+.advantage p {
+    color: #555;
+}.reviews {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.reviews h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.review-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review {
+    width: 250px;
+    padding: 25px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+}
+
+.review p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.review h3 {
+    margin-top: 20px;
+}.contacts {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+.contacts h2 {
+    font-size: 35px;
+}
+
+.contacts p {
+    color: #ccc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 30px auto 0;
+}
+
+form input {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+}
+
+form button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #222;
+    cursor: pointer;
+}html {
+    scroll-behavior: smooth;
+}@media (max-width: 600px) {
+
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .main {
+        padding: 60px 20px;
+    }
+
+    .main h1 {
+        font-size: 35px;
+    }
+
+    .main p {
+        font-size: 18px;
+    }
+
+    .main img {
+        width: 100%;
+    }
+
+    .services h2,
+    .advantages h2,
+    .reviews h2,
+    .contacts h2 {
+        font-size: 28px;
+    }
+
+    .card,
+    .advantage,
+    .review {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+    </style>
+  
+</head>
+
+<body>
+    <nav>
+    <b>СТО АвтоМастер</b>
+
+    <div>
+        <a href="#services">Услуги</a>
+        <a href="#advantages">О нас</a>
+        <a href="#contacts">Контакты</a>
+    </div>
+</nav>
+
+   <div class="main">
+
+    <h1>Ремонт автомобилей любой сложности</h1>
+    <img src="car.jpg" alt="Автомобиль">
+    <p>Качественно обслуживаем и ремонтируем ваш автомобиль</p>
+
+    <button>Записаться на ремонт</button>
+
+</div>
+
+<div class="services" id="services"></div>
+
+    <h2>Наши услуги</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Ремонт двигателя</h3>
+            <p>Диагностика и ремонт двигателя любой сложности.</p>
+        </div>
+
+        <div class="card">
+            <h3>Ремонт ходовой</h3>
+            <p>Проверка и ремонт подвески автомобиля.</p>
+        </div>
+
+        <div class="card">
+            <h3>Замена масла</h3>
+            <p>Быстрая замена масла и фильтров.</p>
+        </div>
+
+    </div>
+
+</div>
+<div class="advantages" id="advantages"></div>
+
+    <h2>Почему выбирают нас</h2>
+
+    <div class="advantage-list">
+
+        <div class="advantage">
+            <h3>10 лет опыта</h3>
+            <p>Большой опыт ремонта автомобилей разных марок.</p>
+        </div>
+
+        <div class="advantage">
+            <h3>Гарантия на работу</h3>
+            <p>Мы уверены в качестве своей работы.</p>
+        </div>
+
+        <div class="advantage">
+            <h3>Быстрый ремонт</h3>
+            <p>Стараемся выполнить работу максимально быстро.</p>
+        </div>
+
+        <div class="advantage">
+            <h3>Опытные мастера</h3>
+            <p>Наши специалисты знают своё дело.</p>
+        </div>
+
+    </div>
+
+</div>
+<div class="reviews">
+
+    <h2>Отзывы наших клиентов</h2>
+
+    <div class="review-list">
+
+        <div class="review">
+            <p>«Быстро нашли проблему и качественно всё починили. Остался доволен!»</p>
+            <h3>Александр</h3>
+        </div>
+
+        <div class="review">
+            <p>«Хороший сервис, приятные мастера. Машину отремонтировали за один день.»</p>
+            <h3>Иван</h3>
+        </div>
+
+        <div class="review">
+            <p>«Обращаюсь сюда уже не первый раз. Работой всегда доволен.»</p>
+            <h3>Дмитрий</h3>
+        </div>
+
+    </div>
+
+</div>
+<div class="contacts" id="contacts"></div>
+
+    <h2>Запишитесь на ремонт</h2>
+
+    <p>Оставьте свои данные, и мы свяжемся с вами.</p>
+
+    <form>
+        <input type="text" placeholder="Ваше имя">
+
+        <input type="tel" placeholder="Ваш телефон">
+
+        <button type="submit">Отправить заявку</button>
+    </form>
+
+</div>
+</body>
+</html>
