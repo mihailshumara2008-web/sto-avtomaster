@@ -250,26 +250,18 @@ form button {
         padding: 16px 20px;
         text-align: center;
         font-size: 18px;
-    }@media (max-width: 600px) {
+   @media (max-width: 600px) {
     .cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-@media (max-width: 600px) {
-    .cards {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
         gap: 20px !important;
         width: 100% !important;
     }
 
     .card {
         width: 100% !important;
-        max-width: none !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
-        margin: 0 !important;
     }
 }
     </style>
