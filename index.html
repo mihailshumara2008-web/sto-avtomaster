@@ -211,6 +211,19 @@ form button {
         max-width: 300px;
     }
 
+}.main-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: #c92f3b;
 }
     </style>
   
@@ -233,8 +246,7 @@ form button {
     <img src="car.jpg" alt="Автомобиль">
     <p>Качественно обслуживаем и ремонтируем ваш автомобиль</p>
 
-    <button>Записаться на ремонт</button>
-
+   <a href="#contacts" class="main-button">Записаться на ремонт</a>
 </div>
 
 <div class="services" id="services"></div>
@@ -320,14 +332,65 @@ form button {
 
     <p>Оставьте свои данные, и мы свяжемся с вами.</p>
 
-    <form>
-        <input type="text" placeholder="Ваше имя">
+    <form id="contact-form">
 
-        <input type="tel" placeholder="Ваш телефон">
+    <input 
+        type="text" 
+        name="name"
+        placeholder="Ваше имя" 
+        required
+    >
 
-        <button type="submit">Отправить заявку</button>
-    </form>
+    <input 
+        type="tel" 
+        name="phone"
+        placeholder="Ваш телефон" 
+        required
+    >
 
+    <button type="submit">Отправить заявку</button>
+
+    <p id="form-message"></p>
+
+</form>
 </div>
+<script>
+    const form = document.getElementById("contact-form");
+    const message = document.getElementById("form-message");
+
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const name = form.name.value;
+        const phone = form.phone.value;
+
+        message.textContent = "Отправляем заявку...";
+
+        try {
+            const response = await fetch("throbbing-pond-130fsto-avtomaster-form.mihailshumara2008.workers.dev", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    phone: phone
+                })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                message.textContent = "Заявка отправлена! Мы свяжемся с вами.";
+                form.reset();
+            } else {
+                message.textContent = "Не удалось отправить заявку.";
+            }
+
+        } catch (error) {
+            message.textContent = "Произошла ошибка. Попробуйте ещё раз.";
+        }
+    });
+</script>
 </body>
 </html>
