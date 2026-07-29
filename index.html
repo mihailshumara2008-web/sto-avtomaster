@@ -367,16 +367,19 @@ form button {
         message.textContent = "Отправляем заявку...";
 
         try {
-            const response = await fetch("https://throbbing-pond-130fsto-avtomaster-form.mihailshumara2008.workers.dev", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    name: name,
-                    phone: phone
-                })
-            });
+            const response = await fetch(
+                "https://throbbing-pond-130fsto-avtomaster-form.mihailshumara2008.workers.dev",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        phone: phone
+                    })
+                }
+            );
 
             const result = await response.json();
 
